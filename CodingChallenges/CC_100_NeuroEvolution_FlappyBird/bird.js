@@ -18,12 +18,9 @@ class Bird {
     if (brain) {
       this.brain = brain.copy();
     } else {
-<<<<<<< HEAD
-      this.brain = new NeuralNetwork(5, 10,3);
-=======
+
       this.brain = new NeuralNetwork(5,4,1);
 
->>>>>>> ee654aa3247af9283f6af7f290c2dcbac9ffb620
     }
   }
 
@@ -77,17 +74,11 @@ class Bird {
     inputs[3] = closest.x / width;
     inputs[4] = this.velocity;
     let output = this.brain.predict(inputs);
-<<<<<<< HEAD
-    if (output[3] > 0.5) {
-      //do not move
-    } else
-    if (output[0] > output[1]) {
-      this.up(output[2]);
-=======
+
 
     if (output[0] > 0.5){//output[1]) {
       this.up(output[1]);
->>>>>>> ee654aa3247af9283f6af7f290c2dcbac9ffb620
+
     }
 
 
@@ -100,11 +91,6 @@ class Bird {
     //하나만 세이브
    if(this == birds[0] && (this.score % 50000)==0){
         localStorage['gen_cnt'] = generation_cnt++;
-<<<<<<< HEAD
-=======
-        console.log("brain saved " + birds.length + " survived" )
-
->>>>>>> ee654aa3247af9283f6af7f290c2dcbac9ffb620
         localStorage.setItem('brain',this.brain.serialize());
         console.log("brain saved & survived birds="+birds.length)
 
