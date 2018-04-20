@@ -3,7 +3,7 @@
 // http://patreon.com/codingtrain
 
 // Neuro-Evolution Flappy Bird
-var topScore = 2;
+var topScore = 0;
 
 class Bird {
   constructor(brain) {
